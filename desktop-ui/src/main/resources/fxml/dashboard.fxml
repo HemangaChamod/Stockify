@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.desktopui.controller.DashboardController"
+            prefWidth="1200"
+            prefHeight="750"
+            stylesheets="@/css/dashboard.css"
+            styleClass="root">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="header">
+            <HBox spacing="10">
+                <Label text="📦" styleClass="logo-icon"/>
+                <Label text="Stockify" styleClass="logo-text"/>
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <TextField fx:id="searchField"
+                promptText="Search products..."
+                styleClass="search-box"/>
+
+            <Button text="+ New Product"
+                styleClass="btn-primary"
+                onAction="#onNewProduct"/>
+            <Button text="Export"
+                styleClass="btn-outline"
+                onAction="#onExport"/>
+        </HBox>
+    </top>
+
+    <!-- ================= CENTER ================= -->
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <VBox spacing="24" styleClass="card">
+
+                <!-- ================= TABLE HEADER ================= -->
+                <GridPane hgap="20" styleClass="table-header">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="320"/>
+                        <ColumnConstraints prefWidth="180"/>
+                        <ColumnConstraints prefWidth="180"/>
+                        <ColumnConstraints prefWidth="120"/>
+                        <ColumnConstraints prefWidth="150"/>
+                        <ColumnConstraints prefWidth="160"/>
+                    </columnConstraints>
+
+                    <Label text="NAME AND DESCRIPTION" GridPane.columnIndex="0"/>
+                    <Label text="SELLING PRICE" GridPane.columnIndex="1"/>
+                    <Label text="COST PRICE" GridPane.columnIndex="2"/>
+                    <Label text="UNIT" GridPane.columnIndex="3"/>
+                    <Label text="STOCK IN HAND" GridPane.columnIndex="4"/>
+                    <Label text="STOCK VALUE" GridPane.columnIndex="5"/>
+                </GridPane>
+
+                <!-- ================= DATA ROWS ================= -->
+                <VBox fx:id="cardContainer" spacing="0"/>
+
+                <!-- ================= EMPTY STATE ================= -->
+                <VBox fx:id="emptyState"
+                      spacing="15"
+                      alignment="CENTER"
+                      styleClass="empty-state"
+                      visible="false"
+                      managed="false">
+
+                    <StackPane styleClass="empty-icon-bg">
+                        <Label text="📦" styleClass="empty-icon"/>
+                    </StackPane>
+
+                    <Label text="Nothing in inventory" styleClass="empty-title"/>
+
+                    <Label text="Your inventory is currently empty. Add your first product to start tracking your stock."
+                           wrapText="true"
+                           styleClass="empty-subtitle"/>
+                    <!--
+                    <HBox spacing="15">
+                        <Button text="+ Add Product" styleClass="btn-primary"/>
+                        <Hyperlink text="Import CSV" styleClass="link"/>
+                    </HBox>
+                    -->
+                </VBox>
+
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>

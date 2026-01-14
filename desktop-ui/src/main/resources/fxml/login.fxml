@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.desktopui.controller.LoginController"
+            prefWidth="900"
+            prefHeight="520"
+            stylesheets="@/css/styles.css"
+            styleClass="root">
+
+    <!-- LEFT PANEL -->
+    <left>
+        <VBox spacing="16"
+              alignment="CENTER"
+              prefWidth="380"
+              styleClass="left-panel">
+
+            <StackPane styleClass="icon-circle">
+                <Label text="📦"/>
+            </StackPane>
+
+            <Label text="Inventory Manager" styleClass="brand-title"/>
+
+            <Label text="Manage your stock efficiently with our comprehensive dashboard."
+                   wrapText="true"
+                   styleClass="brand-subtitle"/>
+        </VBox>
+    </left>
+
+    <!-- RIGHT PANEL -->
+    <center>
+        <StackPane>
+            <VBox spacing="22" styleClass="auth-card">
+
+                <!-- TAB SWITCH -->
+                <HBox styleClass="tab-switch">
+                    <Label text="Sign In"
+                           fx:id="signInTab"
+                           styleClass="tab-active"
+                           onMouseClicked="#showSignIn"/>
+
+                    <Label text="Sign Up"
+                           fx:id="signUpTab"
+                           styleClass="tab-inactive"
+                           onMouseClicked="#showSignUp"/>
+                </HBox>
+
+                <!-- EMAIL -->
+                <VBox spacing="6">
+                    <Label text="Email Address" styleClass="field-label"/>
+                    <TextField fx:id="signinEmail"
+                               promptText="you@company.com"
+                               styleClass="input"/>
+                </VBox>
+
+                <!-- PASSWORD -->
+                <VBox spacing="6">
+                    <HBox>
+                        <Label text="Password" styleClass="field-label"/>
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        <Hyperlink text="Forgot password?" styleClass="link"/>
+                    </HBox>
+                    <PasswordField fx:id="signinPassword"
+                                   promptText="••••••••"
+                                   styleClass="input"/>
+                </VBox>
+
+                <CheckBox text="Remember me" styleClass="checkbox"/>
+
+                <Button fx:id="actionButton"
+                        text="Sign In"
+                        maxWidth="Infinity"
+                        styleClass="primary-btn"
+                        onAction="#handleAction"/>
+
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,107 @@
+.root {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-background-color: #F3F4F6;
+}
+
+/* LEFT */
+.left-panel {
+    -fx-background-color: white;
+    -fx-padding: 40;
+}
+
+.icon-circle {
+    -fx-background-color: #EDE9FE;
+    -fx-background-radius: 999;
+    -fx-padding: 16;
+}
+
+.brand-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.brand-subtitle {
+    -fx-text-fill: #6B7280;
+    -fx-text-alignment: center;
+    -fx-max-width: 240;
+}
+
+/* CARD */
+.auth-card {
+    -fx-background-color: white;
+    -fx-padding: 32;
+    -fx-background-radius: 14;
+    -fx-min-width: 360;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 20, 0, 0, 8);
+}
+
+/* TABS */
+.tab-switch {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 999;
+    -fx-padding: 4;
+}
+
+.tab-switch Label {
+    -fx-padding: 8 22;
+    -fx-cursor: hand;
+}
+
+.tab-active {
+    -fx-background-color: white;
+    -fx-background-radius: 999;
+    -fx-text-fill: #7C3AED;
+    -fx-font-weight: bold;
+}
+
+.tab-inactive {
+    -fx-text-fill: #6B7280;
+}
+
+/* INPUTS */
+.field-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #374151;
+}
+
+.input {
+    -fx-pref-height: 40;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E5E7EB;
+}
+
+.input:focused {
+    -fx-border-color: #7C3AED;
+}
+
+/* BUTTONS */
+.primary-btn {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12;
+    -fx-background-radius: 12;
+}
+
+.social-btn {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+/* MISC */
+.link {
+    -fx-text-fill: #7C3AED;
+}
+
+.checkbox {
+    -fx-text-fill: #374151;
+}
+
+.divider-text {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 11px;
+}

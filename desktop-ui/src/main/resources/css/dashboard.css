@@ -1,0 +1,111 @@
+/* ROOT */
+.root {
+    -fx-background-color: #F5F6F8;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+.header {
+    -fx-padding: 18 30;
+    -fx-background-color: #F7F7F8;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.logo-text {
+    -fx-font-weight: bold;
+}
+
+/* SEARCH */
+.search-box {
+    -fx-pref-width: 260;
+    -fx-background-radius: 999;
+    -fx-padding: 10 16;
+}
+
+/* BUTTONS */
+.btn-primary {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-background-radius: 999;
+    -fx-padding: 10 18;
+}
+
+.btn-outline {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-background-radius: 999;
+    -fx-padding: 10 18;
+}
+
+/* CARD */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 12, 0, 0, 4);
+}
+
+/* TABLE HEADER */
+.table-header {
+    -fx-padding: 10 0 16 0;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-header Label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6B7280;
+    -fx-font-weight: bold;
+}
+
+.table-row {
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row:hover {
+    -fx-background-color: #F9FAFB;
+}
+
+/* NAME CELL */
+.item-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.item-sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6B7280;
+}
+
+.item-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6B7280;
+}
+
+/* CELL TEXT */
+.table-row Label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #374151;
+}
+
+/* ALIGNMENT */
+.price {
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.center {
+    -fx-alignment: CENTER;
+}
+
+.stock-value {
+    -fx-font-weight: bold;
+}
+
+/* IMAGE */
+.image-wrapper {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 8;
+    -fx-padding: 6;
+}

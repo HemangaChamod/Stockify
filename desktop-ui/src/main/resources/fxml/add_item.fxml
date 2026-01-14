@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.desktopui.controller.AddItemController"
+            prefWidth="1200"
+            prefHeight="720"
+            stylesheets="@/css/add_item.css">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header">
+            <padding>
+                <Insets top="20" left="30" right="30" bottom="20"/>
+            </padding>
+
+            <Label text="✱ InventoryPro" styleClass="logo"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="Cancel"
+                    styleClass="btn-outline"
+                    onAction="#handleCancel"/>
+
+            <Button text="+ Create Item"
+                    styleClass="btn-primary"
+                    onAction="#handleCreateItem"/>
+        </HBox>
+    </top>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <center>
+        <VBox spacing="20" styleClass="page">
+            <padding>
+                <Insets top="30" left="40" right="40" bottom="30"/>
+            </padding>
+
+            <Label text="Add New Item" styleClass="page-title"/>
+            <Label text="Create a new product card, set pricing, and initialize stock."
+                   styleClass="page-subtitle"/>
+
+            <HBox spacing="25">
+
+                <!-- ================= LEFT COLUMN ================= -->
+                <VBox spacing="20" HBox.hgrow="ALWAYS">
+
+                    <!-- BASIC INFORMATION -->
+                    <VBox spacing="15" styleClass="card">
+                        <Label text="Basic Information" styleClass="card-title"/>
+
+                        <VBox spacing="6">
+                            <Label text="ITEM NAME" styleClass="label"/>
+                            <TextField fx:id="nameField"
+                                       promptText="e.g. Industrial Coffee Grinder"/>
+                        </VBox>
+
+                        <VBox spacing="6">
+                            <Label text="DESCRIPTION" styleClass="label"/>
+                            <TextArea fx:id="descriptionField"
+                                      promptText="Enter product description here..."
+                                      prefRowCount="4"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- PRICING & INVENTORY -->
+                    <VBox spacing="15" styleClass="card">
+                        <Label text="Pricing &amp; Inventory" styleClass="card-title"/>
+
+                        <GridPane hgap="15" vgap="15">
+
+                            <VBox spacing="6">
+                                <Label text="SELLING PRICE" styleClass="label"/>
+                                <TextField fx:id="sellingPriceField"
+                                           promptText="0.00"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="1">
+                                <Label text="COST PRICE" styleClass="label"/>
+                                <TextField fx:id="costPriceField"
+                                           promptText="0.00"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="2">
+                                <Label text="UNIT" styleClass="label"/>
+                                <ComboBox fx:id="unitCombo"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.rowIndex="1">
+                                <Label text="STOCK IN HAND" styleClass="label"/>
+                                <TextField fx:id="stockField"
+                                           promptText="0"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label text="TOTAL STOCK VALUE" styleClass="label"/>
+                                <TextField fx:id="totalValueField"
+                                           editable="false"/>
+                            </VBox>
+
+                        </GridPane>
+                    </VBox>
+
+                </VBox>
+
+                <!-- ================= RIGHT COLUMN ================= -->
+                <VBox spacing="15"
+                      styleClass="card image-card"
+                      prefWidth="300">
+
+                    <Label text="Item Image" styleClass="card-title"/>
+
+                    <VBox alignment="CENTER"
+                          spacing="10"
+                          styleClass="upload-box"
+                          onMouseClicked="#handleImageUpload">
+
+                        <ImageView fx:id="imagePreview"
+                                   fitWidth="180"
+                                   fitHeight="140"
+                                   preserveRatio="true"/>
+
+                        <Label text="Upload Image"
+                               styleClass="upload-text"/>
+                    </VBox>
+
+                    <Label fx:id="imageNameLabel"
+                           text="Supports JPG, PNG up to 5MB"
+                           styleClass="upload-hint"/>
+                </VBox>
+
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

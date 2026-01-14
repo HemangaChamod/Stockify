@@ -1,0 +1,68 @@
+.root {
+    -fx-font-family: "Manrope";
+    -fx-background-color: #f6f8f6;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-padding: 24;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 18;
+}
+
+/* Titles */
+.section-title {
+    -fx-font-size: 18;
+    -fx-font-weight: 800;
+}
+
+/* Inputs */
+.text-field,
+.text-area,
+.combo-box {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 14;
+    -fx-padding: 12 14;
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+}
+
+.text-area {
+    -fx-pref-height: 120;
+}
+
+/* Buttons */
+.primary-btn {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-radius: 999;
+    -fx-padding: 12 28;
+}
+
+.secondary-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 999;
+    -fx-font-weight: 700;
+    -fx-padding: 12 28;
+}
+
+.danger-btn {
+    -fx-background-color: white;
+    -fx-border-color: #fecaca;
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: 700;
+    -fx-background-radius: 999;
+}
+
+/* Image box */
+.image-box {
+    -fx-border-color: #cbd5e1;
+    -fx-border-style: dashed;
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+}

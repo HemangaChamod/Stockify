@@ -1,0 +1,99 @@
+.root {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-background-color: #F9FAFB;
+}
+
+/* HEADER */
+.header {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.logo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* PAGE */
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #6B7280;
+}
+
+/* CARD */
+.card {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 12, 0, 0, 4);
+}
+
+.card-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* LABELS */
+.label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6B7280;
+    -fx-font-weight: bold;
+}
+
+/* INPUTS */
+.text-field,
+.text-area,
+.combo-box {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-pref-height: 36;
+}
+
+/* BUTTONS */
+.btn-primary {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-background-radius: 20;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 20;
+    -fx-padding: 10 20;
+}
+
+/* IMAGE UPLOAD */
+.image-card {
+    -fx-alignment: TOP_CENTER;
+}
+
+.upload-box {
+    -fx-border-color: #CBD5E1;
+    -fx-border-style: dashed;
+    -fx-border-radius: 12;
+    -fx-padding: 40;
+}
+
+.upload-icon {
+    -fx-font-size: 24px;
+}
+
+.upload-text {
+    -fx-font-weight: bold;
+}
+
+.upload-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6B7280;
+}
+
+
+

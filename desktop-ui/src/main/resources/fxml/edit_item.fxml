@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.desktopui.controller.EditItemController"
+            stylesheets="@/css/edit_item.css"
+            styleClass="root">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="16" right="16" bottom="16" left="16"/>
+            </padding>
+
+            <Label text="InventoryPro" styleClass="section-title"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="Cancel"
+                    styleClass="secondary-btn"
+                    onAction="#onCancel"/>
+
+            <Button text="Save Changes"
+                    styleClass="primary-btn"
+                    onAction="#onSave"/>
+        </HBox>
+    </top>
+
+    <!-- ================= CONTENT ================= -->
+    <center>
+        <ScrollPane fitToWidth="true">
+            <HBox spacing="24">
+                <padding>
+                    <Insets top="24" right="24" bottom="24" left="24"/>
+                </padding>
+
+                <!-- LEFT SIDE -->
+                <VBox spacing="24" prefWidth="700">
+
+                    <!-- BASIC INFO -->
+                    <VBox spacing="16" styleClass="card">
+                        <padding>
+                            <Insets top="16" right="16" bottom="16" left="16"/>
+                        </padding>
+
+                        <Label text="Basic Information"
+                               styleClass="section-title"/>
+
+                        <VBox spacing="6">
+                            <Label text="ITEM NAME"/>
+                            <TextField fx:id="nameField"/>
+                        </VBox>
+
+                        <VBox spacing="6">
+                            <Label text="DESCRIPTION"/>
+                            <TextArea fx:id="descriptionArea"
+                                      prefRowCount="4"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- PRICING -->
+                    <VBox spacing="16" styleClass="card">
+                        <padding>
+                            <Insets top="16" right="16" bottom="16" left="16"/>
+                        </padding>
+
+                        <Label text="Pricing and Inventory"
+                               styleClass="section-title"/>
+
+                        <GridPane hgap="16" vgap="16">
+
+                            <!-- CORRECT PLACE -->
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="33"/>
+                                <ColumnConstraints percentWidth="33"/>
+                                <ColumnConstraints percentWidth="34"/>
+                            </columnConstraints>
+
+                            <VBox spacing="6" GridPane.columnIndex="0">
+                                <Label text="SELLING PRICE"/>
+                                <TextField fx:id="sellingPriceField"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="1">
+                                <Label text="COST PRICE"/>
+                                <TextField fx:id="costPriceField"/>
+                            </VBox>
+
+                            <VBox spacing="6" GridPane.columnIndex="2">
+                                <Label text="UNIT"/>
+                                <ComboBox fx:id="unitCombo"/>
+                            </VBox>
+
+                            <VBox spacing="6"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="0">
+                                <Label text="STOCK IN HAND"/>
+                                <TextField fx:id="stockField"/>
+                            </VBox>
+
+                            <VBox spacing="6"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="1">
+                                <Label text="TOTAL STOCK VALUE"/>
+                                <TextField fx:id="totalValueField"
+                                           editable="false"/>
+                            </VBox>
+                        </GridPane>
+                    </VBox>
+
+                </VBox>
+
+                <!-- RIGHT SIDE -->
+                <VBox spacing="24" prefWidth="360">
+
+                    <!-- IMAGE -->
+                    <VBox spacing="12" styleClass="card">
+                        <padding>
+                            <Insets top="16" right="16" bottom="16" left="16"/>
+                        </padding>
+
+                        <Label text="Item Image"
+                               styleClass="section-title"/>
+
+                        <StackPane styleClass="image-box"
+                                   alignment="CENTER">
+
+                            <ImageView fx:id="itemImage"
+                                       fitWidth="260"
+                                       fitHeight="260"
+                                       preserveRatio="true"/>
+
+                            <Button text="Change Image"
+                                    styleClass="secondary-btn"
+                                    onAction="#onChangeImage"
+                                    StackPane.alignment="BOTTOM_CENTER">
+                                <StackPane.margin>
+                                    <Insets top="12" right="12" bottom="12" left="12"/>
+                                </StackPane.margin>
+                            </Button>
+                        </StackPane>
+                    </VBox>
+
+                    <!-- DANGER -->
+                    <VBox spacing="12" styleClass="danger-card">
+                        <padding>
+                            <Insets top="16" right="16" bottom="16" left="16"/>
+                        </padding>
+
+                        <Label text="Danger Zone"
+                               styleClass="section-title"/>
+
+                        <Label text="Deleting this item is permanent."
+                               wrapText="true"/>
+
+                        <Button text="Delete Item"
+                                styleClass="danger-btn"
+                                onAction="#onDelete"/>
+                    </VBox>
+
+                </VBox>
+
+            </HBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
