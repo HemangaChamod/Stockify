@@ -14,13 +14,13 @@ Stockify is a full-stack desktop inventory management application built with Jav
 - Add new inventory items
 - Edit existing items
 - Delete items
-- View all items in a clean dashboard
+- View all items in a dashboard
 - Search inventory by name or description
 - Automatic total stock value calculation
 
 ### Inventory Dashboard
 - Clean, modern UI built with JavaFX
-- Displays:
+- Include:
   - Product Image
   - Product name & description
   - Selling price
