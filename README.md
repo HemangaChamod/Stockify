@@ -32,3 +32,11 @@ Stockify is a full-stack desktop inventory management application built with Jav
 ### Export Functionality
 - Export inventory data to CSV
 
+---
+
+## Installation
+
+The application is distributed as a Windows installer.
+
+🔽 Download the latest release:
+https://github.com/HemangaChamod/Stockify/releases/tag/v1.0.0
