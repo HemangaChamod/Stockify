@@ -7,8 +7,8 @@ Stockify is a full-stack desktop inventory management application built with Jav
 ## Key Features
 
 ### User Authentication
-- User registration (Sign Up)
-- Secure user login
+- User sign up
+- User login
 
 ### Inventory Management
 - Add new inventory items
