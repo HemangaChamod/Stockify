@@ -36,7 +36,7 @@ Stockify is a full-stack desktop inventory management application built with Jav
 
 ## Installation
 
-The application is distributed as a Windows installer.
+The application is distributed as a Windows installer(.exe).
 
 🔽 Download the latest release:
 https://github.com/HemangaChamod/Stockify/releases/tag/v1.0.0
