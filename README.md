@@ -1,7 +1,6 @@
 # Stockify – Inventory Management Desktop Application
 
-Stockify is a modern **desktop-based inventory management system** designed for small businesses and individuals to manage products, stock levels, and inventory value efficiently.  
-It is built as a **JavaFX desktop application** with a **Spring Boot backend**, packaged with a professional **Windows installer**.
+Stockify is a full-stack desktop inventory management application built with JavaFX, Spring Boot, and MySQL, and packaged as a Windows installer (.exe) using Inno Setup software.
 
 ---
 
@@ -11,8 +10,6 @@ It is built as a **JavaFX desktop application** with a **Spring Boot backend**, 
 - User registration (Sign Up)
 - Secure user login
 
----
-
 ### Inventory Management
 - Add new inventory items
 - Edit existing items
@@ -20,8 +17,6 @@ It is built as a **JavaFX desktop application** with a **Spring Boot backend**, 
 - View all items in a clean dashboard
 - Search inventory by name or description
 - Automatic total stock value calculation
-
----
 
 ### Inventory Dashboard
 - Clean, modern UI built with JavaFX
@@ -33,8 +28,6 @@ It is built as a **JavaFX desktop application** with a **Spring Boot backend**, 
   - Unit
   - Stock in hand
   - Total stock value
-
----
 
 ### Export Functionality
 - Export inventory data to CSV
