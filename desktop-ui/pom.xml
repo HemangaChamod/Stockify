@@ -47,6 +47,16 @@
     <build>
         <plugins>
 
+            <!-- JavaFX RUN PLUGIN -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.desktopui.Launcher</mainClass>
+                </configuration>
+            </plugin>
+
             <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
